@@ -1,363 +1,740 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="모세혈관확장성 운동실조증(A-T) 환우와 가족을 위한 정보와 소통 공간">
-<title>한국 A-T 환우회 | Ataxia-Telangiectasia Korea</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="모세혈관확장성 운동실조증(A-T) 환우와 가족을 위한 정보와 소통 공간">
+  <title>한국 A-T 환우회 | Ataxia-Telangiectasia Korea</title>
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;
-color:#24343a;
-background:#fff;
-line-height:1.7
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-a{text-decoration:none;color:inherit}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Noto Sans KR", Arial, sans-serif;
+      color: #24343a;
+      background: #ffffff;
+      line-height: 1.7;
+    }
 
-.container{
-width:min(1120px,90%);
-margin:auto
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-header{
-position:sticky;
-top:0;
-z-index:10;
-background:rgba(255,255,255,.96);
-border-bottom:1px solid #e8eeee
-}
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
 
-.nav{
-min-height:76px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px
-}
+    header {
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e7eeee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.brand{
-display:flex;
-align-items:center;
-gap:11px;
-font-weight:800;
-color:#315d86
-}
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-.mark{
-width:42px;
-height:42px;
-border-radius:50%;
-display:grid;
-place-items:center;
-background:#eaf4fb;
-font-size:22px
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      color: #176b67;
+    }
 
-.brand small{
-display:block;
-font-size:10px;
-font-weight:600;
-letter-spacing:.3px;
-color:#78909c
-}
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #dff3ef;
+      display: grid;
+      place-items: center;
+      color: #16847d;
+      font-size: 20px;
+    }
 
-nav{
-display:flex;
-gap:22px;
-font-size:14px;
-font-weight:700
-}
+    .logo-text small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: #78918f;
+      font-weight: 600;
+    }
 
-.hero{
-min-height:570px;
-display:flex;
-align-items:center;
-background:
-linear-gradient(90deg,rgba(238,248,255,.94) 0%,rgba(255,255,255,.72) 48%,rgba(255,255,255,.15) 100%),
-url("hero-family.png") center/cover no-repeat;
-position:relative;
-overflow:hidden
-}
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      font-size: 15px;
+      font-weight: 600;
+    }
 
-.hero:after{
-content:"";
-position:absolute;
-width:420px;
-height:420px;
-border-radius:50%;
-right:-100px;
-top:60px;
-background:rgba(91,143,201,.10)
-}
+    nav a:hover {
+      color: #14877f;
+    }
 
-.hero-copy{
-position:relative;
-z-index:1;
-max-width:720px;
-padding:70px 0
-}
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 25%, #dff4ef 0, transparent 28%),
+        radial-gradient(circle at 8% 90%, #eaf7f4 0, transparent 25%),
+        linear-gradient(135deg, #f8fcfb, #edf8f5);
+      overflow: hidden;
+    }
 
-.eyebrow{
-color:#5b8fc9;
-font-size:13px;
-font-weight:800;
-letter-spacing:1px;
-margin-bottom:14px
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 55px;
+      padding: 80px 0;
+    }
 
-h1{
-font-size:clamp(40px,6vw,68px);
-line-height:1.12;
-color:#315d86;
-margin-bottom:22px;
-letter-spacing:-2px
-}
+    .eyebrow {
+      display: inline-block;
+      background: #dff3ef;
+      color: #14766f;
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
 
-.hero p{
-font-size:18px;
-color:#536b7c;
-max-width:650px;
-margin-bottom:28px
-}
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.18;
+      letter-spacing: -2px;
+      color: #183e3d;
+      margin-bottom: 23px;
+    }
 
-.btn{
-display:inline-block;
-padding:13px 22px;
-border-radius:999px;
-background:#5b8fc9;
-color:white;
-font-weight:800
-}
+    .hero h1 span {
+      color: #159187;
+    }
 
-section{padding:76px 0}
+    .hero p {
+      max-width: 620px;
+      color: #617575;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
 
-.section-title{
-font-size:30px;
-color:#315d86;
-margin-bottom:28px
-}
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-.tiles{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:16px
-}
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 9px;
+      font-weight: 700;
+      transition: .2s;
+    }
 
-.tile{
-min-height:165px;
-border-radius:22px;
-padding:25px;
-background:#fff;
-box-shadow:0 8px 28px rgba(49,93,134,.09);
-border:1px solid #edf2f4
-}
+    .btn-primary {
+      background: #16877f;
+      color: white;
+    }
 
-.tile:nth-child(1){background:#f3f9ff}
-.tile:nth-child(2){background:#fff8f2}
-.tile:nth-child(3){background:#f5fbf7}
-.tile:nth-child(4){background:#fff7fa}
+    .btn-primary:hover {
+      background: #106f69;
+      transform: translateY(-2px);
+    }
 
-.icon{
-font-size:30px;
-margin-bottom:10px
-}
+    .btn-outline {
+      border: 1px solid #9ec9c4;
+      color: #176f69;
+      background: white;
+    }
 
-.tile h3{
-font-size:18px;
-margin-bottom:6px
-}
+    .hero-card {
+      position: relative;
+      background: white;
+      padding: 42px;
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(30, 92, 88, .12);
+    }
 
-.tile p{
-font-size:14px;
-color:#687b89
-}
+    .hero-symbol {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 25px;
+      background: #e2f4f0;
+      display: grid;
+      place-items: center;
+      font-size: 48px;
+    }
 
-.news{background:#f7fafb}
+    .hero-card h3 {
+      text-align: center;
+      color: #185c58;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
 
-.newsgrid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px
-}
+    .hero-card p {
+      text-align: center;
+      font-size: 15px;
+      margin: 0;
+    }
 
-.newsitem{
-background:white;
-border-radius:18px;
-padding:22px;
-border:1px solid #e9eff1
-}
+    section {
+      padding: 90px 0;
+    }
 
-.tag{
-display:inline-block;
-font-size:12px;
-font-weight:800;
-color:#5b8fc9;
-background:#eef6fd;
-padding:4px 9px;
-border-radius:999px;
-margin-bottom:12px
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-.newsitem h3{
-font-size:17px;
-margin-bottom:7px
-}
+    .section-title span {
+      color: #15877f;
+      font-weight: 700;
+      font-size: 14px;
+    }
 
-.newsitem p{
-font-size:14px;
-color:#687b89
-}
+    .section-title h2 {
+      font-size: 34px;
+      color: #214443;
+      margin-top: 7px;
+      letter-spacing: -1px;
+    }
 
-.story{
-text-align:center;
-background:linear-gradient(135deg,#fff8f2,#f4f9ff)
-}
+    .section-title p {
+      color: #718180;
+      max-width: 650px;
+      margin: 12px auto 0;
+    }
 
-.story p{
-max-width:720px;
-margin:0 auto 20px;
-color:#607582
-}
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
 
-.mapbox{
-border-radius:22px;
-padding:34px;
-background:linear-gradient(135deg,#edf8ff,#fff);
-border:1px solid #e5eef2
-}
+    .info-card {
+      padding: 32px;
+      border: 1px solid #e3eeee;
+      border-radius: 18px;
+      background: #fff;
+      transition: .25s;
+    }
 
-.maplinks{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-margin-top:22px
-}
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(31,93,88,.08);
+    }
 
-.maplinks div{
-padding:17px;
-border-radius:14px;
-background:rgba(255,255,255,.85);
-text-align:center;
-font-weight:700
-}
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      background: #e5f5f2;
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
 
-.community{text-align:center}
+    .info-card h3 {
+      color: #205754;
+      margin-bottom: 10px;
+    }
 
-.community p{
-max-width:650px;
-margin:0 auto 22px;
-color:#687b89
-}
+    .info-card p {
+      color: #71817f;
+      font-size: 15px;
+    }
 
-footer{
-background:#334e64;
-color:#dbe6ee;
-padding:42px 0
-}
+    .about {
+      background: #f4faf8;
+    }
 
-.foot{
-display:flex;
-justify-content:space-between;
-gap:30px;
-align-items:flex-start
-}
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
 
-.foot strong{color:#fff}
+    .about-box {
+      background: white;
+      border-radius: 22px;
+      padding: 40px;
+      box-shadow: 0 12px 35px rgba(25,91,85,.07);
+    }
 
-.foot small{
-display:block;
-margin-top:5px
-}
+    .about h2 {
+      font-size: 34px;
+      color: #214a47;
+      margin-bottom: 20px;
+    }
 
-@media(max-width:850px){
-nav{display:none}
-.hero{min-height:520px}
-.tiles,.newsgrid{grid-template-columns:1fr 1fr}
-.maplinks{grid-template-columns:1fr 1fr}
-}
+    .about p {
+      color: #667c79;
+      margin-bottom: 18px;
+    }
 
-@media(max-width:560px){
-.brand{font-size:14px}
-.brand small{font-size:8px}
-.hero{min-height:540px}
-.hero-copy{padding:55px 0}
-h1{font-size:42px}
-.hero p{font-size:16px}
-.tiles,.newsgrid,.maplinks{grid-template-columns:1fr}
-section{padding:58px 0}
-.foot{flex-direction:column}
-}
-</style>
+    .notice {
+      border-left: 4px solid #1a9187;
+      background: #e8f6f3;
+      padding: 17px 20px;
+      border-radius: 0 10px 10px 0;
+      color: #476a67;
+      font-size: 14px;
+    }
+
+    .at-list {
+      list-style: none;
+    }
+
+    .at-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid #edf1f0;
+      display: flex;
+      gap: 13px;
+    }
+
+    .check {
+      color: #16877f;
+      font-weight: 900;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .news-card {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #e5eeee;
+      background: white;
+    }
+
+    .news-top {
+      height: 150px;
+      background: linear-gradient(135deg, #d8f0eb, #edf8f5);
+      display: grid;
+      place-items: center;
+      font-size: 45px;
+    }
+
+    .news-content {
+      padding: 25px;
+    }
+
+    .tag {
+      color: #16877f;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .news-content h3 {
+      margin: 8px 0 10px;
+      color: #294d4a;
+      line-height: 1.45;
+    }
+
+    .news-content p {
+      color: #758481;
+      font-size: 14px;
+    }
+
+    .community {
+      background: #1c716b;
+      color: white;
+      text-align: center;
+    }
+
+    .community h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .community p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: #d8efec;
+    }
+
+    .community .btn {
+      background: white;
+      color: #176f69;
+    }
+
+    footer {
+      background: #163b39;
+      color: #bcd1cf;
+      padding: 45px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: white;
+      font-size: 19px;
+    }
+
+    footer p {
+      font-size: 13px;
+      margin-top: 10px;
+      max-width: 600px;
+    }
+
+    .copyright {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 12px;
+    }
+
+    @media (max-width: 800px) {
+      nav ul {
+        display: none;
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-card {
+        padding: 32px 25px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .intro-grid,
+      .news-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2,
+      .about h2,
+      .community h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-<div class="container nav">
+  <div class="container nav">
+    <a href="#" class="logo">
+      <div class="logo-mark">♡</div>
+      <div class="logo-text">
+        한국 A-T 환우회
+        <small>ATAXIA-TELANGIECTASIA KOREA</small>
+      </div>
+    </a>
 
-<a class="brand" href="#">
-<span class="mark">♡</span>
-<span>
-모세혈관확장성 운동실조증 환우회
-<small>Ataxia-Telangiectasia (A-T) Patient Support Group</small>
-</span>
-</a>
-
-<nav>
-<a href="#about">질환 알아보기</a>
-<a href="#news">치료·연구 소식</a>
-<a href="#trials">임상시험</a>
-<a href="#story">환우이야기</a>
-<a href="#community">커뮤니티</a>
-</nav>
-
-</div>
+    <nav>
+      <ul>
+        <li><a href="#about">A-T 알아보기</a></li>
+        <li><a href="#information">의료·연구정보</a></li>
+        <li><a href="#news">새소식</a></li>
+        <li><a href="#community">환우회 소개</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
 
-<section class="hero">
-<div class="container hero-copy">
+  <section class="hero">
+    <div class="container hero-grid">
 
-<div class="eyebrow">
-KOREAN A-T FAMILY ASSOCIATION
-</div>
+      <div>
+        <div class="eyebrow">ATAXIA-TELANGIECTASIA KOREA</div>
 
-<h1>
-A-T와 함께하는<br>
-우리들의 이야기
-</h1>
+        <h1>
+          희귀질환을 넘어,<br>
+          <span>함께 만드는 희망</span>
+        </h1>
 
-<p>
-모세혈관확장성 운동실조증 환우와 가족이 함께 소통하고,
-신뢰할 수 있는 정보를 나누며 새로운 치료의 가능성을 함께 찾아가는
-희망의 공간입니다.
-</p>
+        <p>
+          한국 A-T 환우회는 모세혈관확장성 운동실조증
+          (Ataxia-Telangiectasia, A-T) 환우와 가족들이
+          정확한 정보를 나누고 서로 연결될 수 있도록 함께합니다.
+        </p>
 
-<a class="btn" href="#about">
-환우회 소개 보기 →
-</a>
+        <div class="buttons">
+          <a href="#about" class="btn btn-primary">A-T 알아보기</a>
+          <a href="#community" class="btn btn-outline">환우회 소개</a>
+        </div>
+      </div>
 
-</div>
-</section>
+      <div class="hero-card">
+        <div class="hero-symbol">🌿</div>
 
+        <h3>혼자가 아닌 우리</h3>
 
-<section id="about">
-<div class="container">
+        <p>
+          같은 경험을 가진 가족들이 만나고,<br>
+          정보를 나누고, 서로의 힘이 되는 공간입니다.
+        </p>
+      </div>
 
-<h2 class="section-title">함께 찾는 정보</h2>
+    </div>
+  </section>
 
-<div class="tiles">
+  <section id="information">
+    <div class="container">
 
-<a class="tile" href="#about">
-<div class="icon">📖</div>
-<h3>질환 알아보기</h3>
-<p>A-T에 대한 기본 정보와 가족이 알아두면 좋은 내용을 정리합니다.</p>
-</a>
+      <div class="section-title">
+        <span>TOGETHER FOR A-T</span>
+        <h2>환우와 가족을 위한 공간</h2>
+        <p>
+          질환 정보부터 연구 소식, 가족 간의 연결까지
+          필요한 정보를 한곳에서 만나보세요.
+        </p>
+      </div>
 
-<a class="tile" href="#news
+      <div class="intro-grid">
+
+        <div class="info-card">
+          <div class="icon">🧬</div>
+          <h3>A-T 질환 정보</h3>
+          <p>
+            모세혈관확장성 운동실조증의 특징과 증상,
+            진료 및 관리에 관한 기본 정보를 제공합니다.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">🔬</div>
+          <h3>치료·연구 소식</h3>
+          <p>
+            국내외 A-T 연구와 임상시험,
+            새로운 치료 관련 정보를 소개합니다.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">🤝</div>
+          <h3>환우 가족 연결</h3>
+          <p>
+            같은 경험을 가진 환우와 가족들이
+            서로 소통하고 정보를 나눌 수 있도록 함께합니다.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container about-grid">
+
+      <div>
+        <span class="eyebrow">ABOUT A-T</span>
+
+        <h2>모세혈관확장성 운동실조증이란?</h2>
+
+        <p>
+          모세혈관확장성 운동실조증
+          (Ataxia-Telangiectasia, A-T)은
+          ATM 유전자의 이상과 관련된 희귀 유전질환입니다.
+        </p>
+
+        <p>
+          운동실조를 비롯해 신경계, 면역계 등
+          여러 신체 기능에 영향을 줄 수 있어
+          환자 개개인의 상태에 맞는 지속적인 의료 관리가 중요합니다.
+        </p>
+
+        <div class="notice">
+          이 홈페이지의 정보는 일반적인 정보 제공을 위한 것이며,
+          개인의 진단이나 치료를 대신하지 않습니다.
+          치료와 검사에 관한 결정은 담당 의료진과 상담하세요.
+        </div>
+      </div>
+
+      <div class="about-box">
+        <ul class="at-list">
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>희귀 유전질환</strong><br>
+              ATM 유전자 변이와 관련되어 있습니다.
+            </div>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>신경학적 증상</strong><br>
+              운동 조절과 균형 등에 영향을 줄 수 있습니다.
+            </div>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>지속적인 관리</strong><br>
+              여러 진료과의 협력과 정기적인 관리가 필요할 수 있습니다.
+            </div>
+          </li>
+
+          <li>
+            <span class="check">✓</span>
+            <div>
+              <strong>연구의 발전</strong><br>
+              전 세계에서 A-T 관련 치료와 연구가 계속되고 있습니다.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="container">
+
+      <div class="section-title">
+        <span>A-T NEWS</span>
+        <h2>새로운 소식</h2>
+        <p>
+          A-T 치료와 연구, 환우회와 관련된 주요 소식을 전합니다.
+        </p>
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-card">
+          <div class="news-top">💊</div>
+          <div class="news-content">
+            <span class="tag">치료 정보</span>
+            <h3>A-T 치료 관련 최신 정보</h3>
+            <p>
+              새로운 치료제와 해외 승인 소식 등을
+              확인할 수 있는 공간입니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-top">🔬</div>
+          <div class="news-content">
+            <span class="tag">RESEARCH</span>
+            <h3>국내외 연구 및 임상시험</h3>
+            <p>
+              A-T와 관련해 진행되고 있는 연구와
+              임상시험 소식을 정리합니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-top">💚</div>
+          <div class="news-content">
+            <span class="tag">COMMUNITY</span>
+            <h3>환우회 소식</h3>
+            <p>
+              환우 가족 모임과 행사,
+              환우회 활동 소식을 전합니다.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="community" id="community">
+    <div class="container">
+      <h2>우리는 함께할 때 더 강해집니다.</h2>
+
+      <p>
+        A-T 환우와 가족들이 서로를 만나고
+        경험과 정보를 나누며 더 나은 내일을 만들어갈 수 있도록
+        한국 A-T 환우회가 함께하겠습니다.
+      </p>
+
+      <a href="mailto:atfamilykorea@gmail.com" class="btn">
+        환우회 문의하기
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+      <div>
+        <strong>한국 A-T 환우회</strong>
+        <p>
+          Korean Ataxia-Telangiectasia Family Association
+        </p>
+      </div>
+
+      <div>
+        <p>
+          모세혈관확장성 운동실조증 환우와 가족을 위한
+          정보와 소통의 공간입니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 한국 A-T 환우회. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+</body>
